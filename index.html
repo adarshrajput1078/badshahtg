@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Telegram Channel</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2008308190078079');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2008308190078079&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            background-color: #f6f8fb;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .headline {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            max-width: 450px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .image-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        /* Image ki styling screenshot ke hisaab se */
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid #6b00ff; /* Purple border */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stars {
+            color: #ffaa00;
+            font-size: 28px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .join-btn {
+            background-color: #0051ff; /* Blue button */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: 2px dashed #ff0000; /* Red dashed border */
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 280px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .join-btn svg {
+            margin-right: 10px;
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+
+        .join-btn:hover {
+            background-color: #0044cc;
+        }
+
+        .countdown-container {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .countdown-number {
+            font-size: 32px;
+            color: red;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="headline">
+        AGAR TUMHEN ACCURATE SINGLE AUR 100 AND 1% WINNING CHAHIYE AAJ IS CHANNEL KO JOIN KARO AUR APNI JOURNEY START KARO
+    </div>
+
+    <div class="image-container">
+        <!-- Yahan par apni image ka URL daalein -->
+        <img src="logo.jpg" alt="Join Now">
+    </div>
+
+    <div class="stars">
+        ★★★★★
+    </div>
+
+    <!-- Button aur Tracking Event -->
+    <a href="https://t.me/+0Y7ddccEeG42ZTZl" class="join-btn" id="joinButton" onclick="trackSubscribe()">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.18-.08-.05-.19-.02-.27 0-.11.03-1.87 1.19-5.27 3.48-.5.35-.95.52-1.35.51-.44-.01-1.28-.25-1.9-.45-.77-.25-1.38-.38-1.33-.8.03-.22.34-.44.93-.68 3.63-1.58 6.06-2.63 7.28-3.13 3.46-1.42 4.18-1.68 4.65-1.69.1 0 .33.02.48.14.12.1.15.24.16.35.01.05.02.16.02.24z"/>
+        </svg>
+        JOIN TELEGRAM FREE
+    </a>
+
+    <div class="countdown-container">
+        Redirecting in...
+        <span class="countdown-number" id="countdownDisplay">100</span>
+    </div>
+
+    <script>
+        // Custom Subscribe Event ko track karne ke liye function
+        function trackSubscribe() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Subscribe');
+            }
+        }
+
+        // Fast countdown (100 to 0 in ~1.5 seconds) logic
+        let count = 100;
+        const counterElement = document.getElementById('countdownDisplay');
+        const telegramLink = "https://t.me/+0Y7ddccEeG42ZTZl";
+
+        const interval = setInterval(() => {
+            count--;
+            counterElement.innerText = count;
+
+            if (count <= 0) {
+                clearInterval(interval);
+                
+                // Redirect hone se theek pehle Subscribe track karna
+                trackSubscribe();
+                
+                // Automatically Telegram par bhejna
+                window.location.href = telegramLink;
+            }
+        }, 15); // 15 milliseconds ki speed se kam hoga (100 * 15ms = 1500ms = 1.5 sec)
+    </script>
+
+</body>
+</html>
