@@ -1,230 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Bot traffic rokne ke liye No-Index tag -->
-    <meta name="robots" content="noindex, nofollow">
-    
-    <title>BADSHAH BHAIYA - Telegram Channel</title>
-    
-    <!-- Meta Pixel Code -->  
-    <script>  
-    !function(f,b,e,v,n,t,s)  
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?  
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};  
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';  
-    n.queue=[];t=b.createElement(e);t.async=!0;  
-    t.src=v;s=b.getElementsByTagName(e)[0];  
-    s.parentNode.insertBefore(t,s)}(window, document,'script',  
-    'https://connect.facebook.net/en_US/fbevents.js');  
-    fbq('init', '2236204470286124');  
-    fbq('track', 'PageView');  
-    </script>  
-    <noscript><img height="1" width="1" style="display:none"  
-    src="https://www.facebook.com/tr?id=2236204470286124&ev=PageView&noscript=1"  
-    /></noscript>  
-    <!-- End Meta Pixel Code -->  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<title>Badshah Army | Telegram Learning Community</title>
 
-        body {
-            background-color: #e8e8e8;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+<meta name="description"
+content="Join Badshah Army — a 1500+ member Telegram learning community.">
 
-        .card {
-            background-color: #ffffff;
-            width: 90%;
-            max-width: 380px;
-            border-radius: 30px;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<!-- ================= META PIXEL ================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+arguments.length?arguments[0]:null:n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 25px;
-        }
+fbq('init','2008308190078079');
+fbq('track','PageView');
+</script>
 
-        .name {
-            font-family: 'Georgia', serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2008308190078079&ev=PageView&noscript=1">
+</noscript>
+<!-- =============================================== -->
 
-        .join-btn {
-            background-color: #1765b7;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 80%;
-            margin-bottom: 35px;
-            transition: background-color 0.3s;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-        .join-btn:hover {
-            background-color: #14559c;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
 
-        .countdown-container {
-            margin-bottom: 40px;
-            min-height: 50px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .timer {
-            color: #d1215b;
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 4px;
-            margin-bottom: 8px;
-        }
+body{
+    font-family:'Inter',Arial,sans-serif;
+    color:#fff;
+    background:
+        radial-gradient(circle at 50% -10%,rgba(255,190,40,.17),transparent 34%),
+        radial-gradient(circle at 100% 50%,rgba(0,180,255,.07),transparent 30%),
+        #050609;
+    min-height:100vh;
+    overflow-x:hidden;
+}
 
-        .labels {
-            color: #d1215b;
-            font-size: 10px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            word-spacing: 12px;
-        }
+body::before{
+    content:"";
+    position:fixed;
+    width:300px;
+    height:300px;
+    left:-150px;
+    top:35%;
+    background:rgba(255,190,40,.06);
+    filter:blur(90px);
+    pointer-events:none;
+}
 
-        .footer {
-            font-size: 12px;
-            font-weight: bold;
-            color: #000;
-        }
+.wrapper{
+    width:100%;
+    max-width:480px;
+    margin:auto;
+    padding:14px 13px 30px;
+}
 
-        .footer .ghost {
-            color: #d1215b;
-        }
-    </style>
+.topbar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:12px;
+    color:#b9c0cd;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.7px;
+}
+
+.online-dot{
+    width:7px;
+    height:7px;
+    background:#43e38a;
+    border-radius:50%;
+    box-shadow:0 0 12px #43e38a;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(180deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.018));
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:28px;
+    padding:24px 17px 21px;
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.65),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    top:-90px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255,193,51,.10);
+    filter:blur(55px);
+}
+
+.logo-wrap{
+    position:relative;
+    width:82px;
+    height:82px;
+    margin:0 auto 13px;
+}
+
+.logo{
+    width:82px;
+    height:82px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:
+        linear-gradient(145deg,#ffe28a 0%,#d89b16 45%,#704600 100%);
+    border:3px solid rgba(255,255,255,.18);
+    box-shadow:
+        0 0 0 7px rgba(255,194,55,.05),
+        0 0 40px rgba(255,190,30,.25);
+    font-size:38px;
+    color:#171006;
+}
+
+.logo-ring{
+    position:absolute;
+    inset:-6px;
+    border-radius:50%;
+    border:1px solid rgba(255,204,76,.35);
+}
+
+.badge{
+    width:max-content;
+    max-width:100%;
+    margin:0 auto 8px;
+    padding:5px 10px;
+    border-radius:50px;
+    background:rgba(255,193,51,.08);
+    border:1px solid rgba(255,193,51,.20);
+    color:#f8cb5a;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+h1{
+    text-align:center;
+    font-size:29px;
+    line-height:1.1;
+    font-weight:900;
+    letter-spacing:-1px;
+    background:linear-gradient(180deg,#fff,#d7dbe2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    max-width:330px;
+    margin:9px auto 16px;
+    text-align:center;
+    color:#9da6b5;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-bottom:13px;
+}
+
+.stat{
+    padding:13px 7px;
+    text-align:center;
+    border-radius:16px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.075);
+}
+
+.stat-number{
+    font-size:21px;
+    font-weight:900;
+    color:#f6cb58;
+    margin-bottom:4px;
+}
+
+.stat-label{
+    color:#8993a4;
+    font-size:9px;
+    font-weight:600;
+}
+
+/* MAIN CTA — UPPER & VISIBLE */
+.cta{
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:59px;
+    padding:15px 17px;
+    margin:3px 0 11px;
+    border:0;
+    border-radius:17px;
+    text-decoration:none;
+    color:#151006;
+    background:
+        linear-gradient(135deg,#ffe083,#f4bb32 55%,#d99b16);
+    box-shadow:
+        0 14px 35px rgba(231,170,39,.28),
+        inset 0 1px 0 rgba(255,255,255,.5);
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.1px;
+    cursor:pointer;
+    transition:transform .15s ease,filter .15s ease;
+    overflow:hidden;
+}
+
+.cta::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:35%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.28),
+        transparent
+    );
+    transform:translateX(-130%);
+    animation:shine 3.2s infinite;
+}
+
+@keyframes shine{
+    0%,55%{
+        transform:translateX(-130%);
+    }
+    75%,100%{
+        transform:translateX(330%);
+    }
+}
+
+.cta:active{
+    transform:scale(.975);
+}
+
+.cta.disabled{
+    opacity:.65;
+    pointer-events:none;
+}
+
+/* TRUST */
+.trust{
+    text-align:center;
+    margin-bottom:14px;
+    color:#687283;
+    font-size:9px;
+    line-height:1.5;
+}
+
+/* LEARNING */
+.learning{
+    padding:16px;
+    border-radius:19px;
+    background:
+        linear-gradient(135deg,
+        rgba(255,195,58,.07),
+        rgba(255,255,255,.025));
+    border:1px solid rgba(255,195,58,.12);
+    margin-bottom:12px;
+}
+
+.learning-title{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:14px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.learning-icon{
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:9px;
+    background:rgba(255,195,58,.10);
+}
+
+.item{
+    display:flex;
+    align-items:flex-start;
+    gap:9px;
+    margin:9px 0;
+    color:#c1c8d4;
+    font-size:11px;
+    line-height:1.45;
+}
+
+.check{
+    flex:none;
+    width:18px;
+    height:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(66,220,135,.10);
+    color:#55df91;
+    font-size:9px;
+    font-weight:900;
+}
+
+/* COMMUNITY */
+.community{
+    padding:14px;
+    border-radius:17px;
+    background:#0b0e14;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.community-row{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.telegram-icon{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(39,161,218,.12);
+    font-size:21px;
+}
+
+.community-text strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:3px;
+}
+
+.community-text span{
+    color:#7f8999;
+    font-size:9px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:16px;
+    color:#4f5867;
+    font-size:8px;
+    line-height:1.5;
+}
+
+@media(max-width:360px){
+
+    .wrapper{
+        padding:10px 9px 25px;
+    }
+
+    .card{
+        padding:21px 14px 18px;
+        border-radius:24px;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    .logo-wrap,
+    .logo{
+        width:76px;
+        height:76px;
+    }
+
+    .logo{
+        font-size:34px;
+    }
+
+    .cta{
+        font-size:14px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <!-- Profile Image -->
-        <img src="logo1.jpg" alt="Profile" class="profile-img">
-        
-        <div class="name">BADSHAH BHAIYA</div>
-        
-        <a href="https://t.me/+rLyM96rdI1QwNDg1" class="join-btn" id="joinButton">
-            🚀 Join Free Telegram
-        </a>
-        
-        <div class="countdown-container">
-            <div class="timer" id="timerDisplay">00 : 00 : 00 : 15</div>
-            <div class="labels" id="timerLabels">DAYS HOURS MINUTES SECONDS</div>
-        </div>
-        
-        <div class="footer">
-            Ads managed by <span class="ghost">GHOST</span>
-        </div>
+<div class="wrapper">
+
+    <div class="topbar">
+        <span class="online-dot"></span>
+        BADSHAH ARMY COMMUNITY
     </div>
 
-    <script>
-        // Track valid user subscriptions
-        function trackSubscribe() {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Subscribe');
-            }
-        }
+    <main class="card">
 
-        let timeLeft = 15;
-        const timerElement = document.getElementById('timerDisplay');
-        const labelsElement = document.getElementById('timerLabels');
-        const telegramLink = "https://t.me/+rLyM96rdI1QwNDg1";
-        
-        let isHuman = false;
-        let timerStarted = false;
+        <!-- LOGO -->
+        <div class="logo-wrap">
+            <div class="logo">♛</div>
+            <div class="logo-ring"></div>
+        </div>
 
-        // Manual button click tracking
-        document.getElementById('joinButton').addEventListener('click', function() {
-            trackSubscribe();
-        });
-
-        // 15-second countdown & redirect
-        function startCountdown() {
-            if (timerStarted) return;
-            timerStarted = true;
-
-            const interval = setInterval(() => {
-                timeLeft--;
-                
-                let displaySeconds = timeLeft < 10 ? "0" + timeLeft : timeLeft;
-                timerElement.innerText = `00 : 00 : 00 : ${displaySeconds}`;
-
-                if (timeLeft <= 0) {
-                    clearInterval(interval);
-                    
-                    // Show "JOIN FAST" and hide labels
-                    timerElement.innerText = "JOIN FAST";
-                    timerElement.style.letterSpacing = "2px"; 
-                    labelsElement.style.display = "none";
-                    
-                    // Fire Pixel ONLY if user is human
-                    if (isHuman) {
-                        trackSubscribe();
-                    }
-                    
-                    // Small delay to let user read "JOIN FAST"
-                    setTimeout(() => {
-                        window.location.href = telegramLink;
-                    }, 1000); 
-                }
-            }, 1000);
-        }
-
-        // Anti-bot detection
-        function markHumanActivity() {
-            isHuman = true;
-            startCountdown();
+        <div class="badge">
             
-            // Remove listeners after first activity
-            window.removeEventListener('touchstart', markHumanActivity);
-            window.removeEventListener('mousemove', markHumanActivity);
-            window.removeEventListener('scroll', markHumanActivity);
-            window.removeEventListener('click', markHumanActivity);
-        }
+           BIG FUND. BIG PROFIT. DAILY PROFIT 
+        </div>
 
-        // Listen for human interactions
-        window.addEventListener('touchstart', markHumanActivity);
-        window.addEventListener('mousemove', markHumanActivity);
-        window.addEventListener('scroll', markHumanActivity);
-        window.addEventListener('click', markHumanActivity);
+        <h1>BADSHAH ARMY</h1>
 
-        // Fallback timer (Bots ke case mein bina track kiye redirect karne ke liye)
-        setTimeout(() => {
-            if (!timerStarted) {
-                startCountdown();
-            }
-        }, 2000);
+        <p class="subtitle">
+            PROFIT AGAR KARNA HAI TO IDAR UDAR MAT JAO ABHI BHI TIME HAI BADSHAH ARMY KE SATH JOIN HO JAO..
+        </p>
 
-    </script>
+        <!-- STATS -->
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-number">1500+</div>
+                <div class="stat-label">MEMBERS</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">
+                WINNING RATE*</div>
+            </div>
+
+        </div>
+
+        <!-- CTA — DIRECTLY VISIBLE -->
+        <a
+            id="joinBtn"
+            class="cta"
+            href="https://t.me/+WRaDC2f0PX04YThl"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            🚀 JOIN TELEGRAM
+        </a>
+
+        <div class="trust">
+            Tap only if you genuinely want to join the Telegram community.
+        </div>
+
+        <!-- LEARNING -->
+        <section class="learning">
+
+            <div class="learning-title">
+                <div class="learning-icon">📚</div>
+                What You'll Find
+            </div>
+
+            <div class="item">
+                <span class="check">✓</span>
+                <span>UNDER 2-3 LEVEL WINNING </span>
+            </div>
+
+            <div class="item">
+                <span class="check">✓</span>
+                <span>BDG PLATFROM</span>
+            </div>
+
+            <div class="item">
+                <span class="check">✓</span>
+                <span>NO DEPOSIT NO WITHDRAWAL PROBLEM </span>
+            </div>
+
+            <div class="item">
+                <span class="check">✓</span>
+                <span>DAILY 2000₹ PROFIT HO RAHA HAI HAMRE MEMBERS KA</span>
+            </div>
+
+        </section>
+
+        <!-- COMMUNITY -->
+        <section class="community">
+
+            <div class="community-row">
+
+                <div class="telegram-icon">✈️</div>
+
+                <div class="community-text">
+                    <strong>1500+ Members</strong>
+                    <span>Badshah Army Telegram Community</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="footer">
+            *The displayed rate is a community claim and is not a guarantee
+            of future results.<br>
+            © 2026 BADSHAH ARMY
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+/*
+  CLICK PROTECTION
+  ----------------
+  Prevents accidental repeated taps and duplicate Lead events.
+*/
+
+const joinBtn = document.getElementById("joinBtn");
+
+let clickLock = false;
+let leadTracked = false;
+
+joinBtn.addEventListener("click", function(e){
+
+    if(clickLock){
+        e.preventDefault();
+        return;
+    }
+
+    clickLock = true;
+
+    /* Track the first genuine CTA interaction */
+    if(!leadTracked && typeof fbq === "function"){
+        fbq("track","Lead");
+        leadTracked = true;
+    }
+
+    /* Prevent accidental double taps */
+    joinBtn.classList.add("disabled");
+
+    setTimeout(function(){
+        clickLock = false;
+        joinBtn.classList.remove("disabled");
+    },1500);
+
+});
+</script>
+
 </body>
 </html>
