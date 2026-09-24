@@ -4,572 +4,555 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Badshah Army | Telegram Learning Community</title>
+<title>Earn With Badshah - Community</title>
 
-<meta name="description"
-content="Join Badshah Army — a 1500+ member Telegram learning community.">
-
-<!-- ================= META PIXEL ================= -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-arguments.length?arguments[0]:null:n.queue.push(arguments)};
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window,document,'script',
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','2008308190078079');
-fbq('track','PageView');
+fbq('init', '1392983659081246');
+fbq('track', 'PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2008308190078079&ev=PageView&noscript=1">
+src="https://www.facebook.com/tr?id=1392983659081246&ev=PageView&noscript=1"/>
 </noscript>
-<!-- =============================================== -->
+<!-- End Meta Pixel Code -->
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    -webkit-tap-highlight-color:transparent;
+:root {
+    --bg: #070707;
+    --card: #0e0e0d;
+    --gold: #f5c542;
+    --gold-light: #ffe58a;
+    --blue: #159cff;
+    --white: #ffffff;
+    --muted: #a69e8b;
+
+    --gold-gradient:
+        linear-gradient(
+            90deg,
+            #c78a12 0%,
+            #f5c542 45%,
+            #ffe58a 50%,
+            #f5c542 55%,
+            #c78a12 100%
+        );
 }
 
-html{
-    scroll-behavior:smooth;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:'Inter',Arial,sans-serif;
-    color:#fff;
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+
     background:
-        radial-gradient(circle at 50% -10%,rgba(255,190,40,.17),transparent 34%),
-        radial-gradient(circle at 100% 50%,rgba(0,180,255,.07),transparent 30%),
-        #050609;
-    min-height:100vh;
-    overflow-x:hidden;
+        radial-gradient(
+            circle at 50% 5%,
+            rgba(21,156,255,.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(245,197,66,.06),
+            transparent 35%
+        ),
+        #070707;
+
+    color: var(--white);
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-body::before{
-    content:"";
-    position:fixed;
-    width:300px;
-    height:300px;
-    left:-150px;
-    top:35%;
-    background:rgba(255,190,40,.06);
-    filter:blur(90px);
-    pointer-events:none;
+.container {
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 21px;
+    padding-top: 25px;
 }
 
-.wrapper{
-    width:100%;
-    max-width:480px;
-    margin:auto;
-    padding:14px 13px 30px;
-}
+/* ================= LOGO ================= */
 
-.topbar{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:12px;
-    color:#b9c0cd;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:.7px;
-}
+.logo-container {
+    width: 145px;
+    height: 145px;
 
-.online-dot{
-    width:7px;
-    height:7px;
-    background:#43e38a;
-    border-radius:50%;
-    box-shadow:0 0 12px #43e38a;
-}
+    border-radius: 50%;
 
-.card{
-    position:relative;
-    overflow:hidden;
-    background:
-        linear-gradient(180deg,
-        rgba(255,255,255,.055),
-        rgba(255,255,255,.018));
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:28px;
-    padding:24px 17px 21px;
+    background: #030303;
+
+    border: 2px solid var(--blue);
+
     box-shadow:
-        0 25px 80px rgba(0,0,0,.65),
-        inset 0 1px 0 rgba(255,255,255,.06);
+        0 0 15px rgba(21,156,255,.55),
+        0 0 35px rgba(21,156,255,.25),
+        0 0 65px rgba(21,156,255,.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
-.card::before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    top:-90px;
-    left:50%;
-    transform:translateX(-50%);
-    background:rgba(255,193,51,.10);
-    filter:blur(55px);
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.logo-wrap{
-    position:relative;
-    width:82px;
-    height:82px;
-    margin:0 auto 13px;
-}
+/* ================= BADGE ================= */
 
-.logo{
-    width:82px;
-    height:82px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    background:
-        linear-gradient(145deg,#ffe28a 0%,#d89b16 45%,#704600 100%);
-    border:3px solid rgba(255,255,255,.18);
+.badge {
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    padding: 8px 20px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(245,197,66,.025);
+
     box-shadow:
-        0 0 0 7px rgba(255,194,55,.05),
-        0 0 40px rgba(255,190,30,.25);
-    font-size:38px;
-    color:#171006;
+        0 0 15px rgba(245,197,66,.08);
 }
 
-.logo-ring{
-    position:absolute;
-    inset:-6px;
-    border-radius:50%;
-    border:1px solid rgba(255,204,76,.35);
+/* ================= TITLE ================= */
+
+h1 {
+    margin: -2px 0 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    color: #fff;
+
+    text-shadow:
+        0 2px 15px rgba(245,197,66,.20);
 }
 
-.badge{
-    width:max-content;
-    max-width:100%;
-    margin:0 auto 8px;
-    padding:5px 10px;
-    border-radius:50px;
-    background:rgba(255,193,51,.08);
-    border:1px solid rgba(255,193,51,.20);
-    color:#f8cb5a;
-    font-size:9px;
-    font-weight:800;
-    letter-spacing:1px;
+.subtitle {
+    margin: -5px 0 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--gold-light);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-h1{
-    text-align:center;
-    font-size:29px;
-    line-height:1.1;
-    font-weight:900;
-    letter-spacing:-1px;
-    background:linear-gradient(180deg,#fff,#d7dbe2);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.features {
+    color: var(--muted);
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-top: -5px;
 }
 
-.subtitle{
-    max-width:330px;
-    margin:9px auto 16px;
-    text-align:center;
-    color:#9da6b5;
-    font-size:12px;
-    line-height:1.6;
-}
+/* ================= TELEGRAM BUTTON ================= */
 
-/* STATS */
-.stats{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-    margin-bottom:13px;
-}
+.cta-button {
+    position: relative;
 
-.stat{
-    padding:13px 7px;
-    text-align:center;
-    border-radius:16px;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,255,255,.075);
-}
+    overflow: hidden;
 
-.stat-number{
-    font-size:21px;
-    font-weight:900;
-    color:#f6cb58;
-    margin-bottom:4px;
-}
+    width: 100%;
 
-.stat-label{
-    color:#8993a4;
-    font-size:9px;
-    font-weight:600;
-}
+    padding: 18px;
 
-/* MAIN CTA — UPPER & VISIBLE */
-.cta{
-    position:relative;
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-    min-height:59px;
-    padding:15px 17px;
-    margin:3px 0 11px;
-    border:0;
-    border-radius:17px;
-    text-decoration:none;
-    color:#151006;
-    background:
-        linear-gradient(135deg,#ffe083,#f4bb32 55%,#d99b16);
+    border-radius: 32px;
+
+    background: var(--gold-gradient);
+
+    color: #080808;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: .3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
     box-shadow:
-        0 14px 35px rgba(231,170,39,.28),
-        inset 0 1px 0 rgba(255,255,255,.5);
-    font-size:15px;
-    font-weight:900;
-    letter-spacing:.1px;
-    cursor:pointer;
-    transition:transform .15s ease,filter .15s ease;
-    overflow:hidden;
+        0 10px 30px rgba(245,197,66,.20),
+        0 0 20px rgba(245,197,66,.08),
+        inset 0 1px 0 rgba(255,255,255,.55);
+
+    transition:
+        transform .15s ease,
+        opacity .2s ease;
 }
 
-.cta::after{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:35%;
-    height:100%;
-    background:linear-gradient(
+.cta-button svg {
+    flex-shrink: 0;
+}
+
+.cta-button::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
         90deg,
         transparent,
-        rgba(255,255,255,.28),
+        rgba(255,255,255,.45),
         transparent
     );
-    transform:translateX(-130%);
-    animation:shine 3.2s infinite;
+
+    animation: shine 3s infinite;
 }
 
-@keyframes shine{
-    0%,55%{
-        transform:translateX(-130%);
+@keyframes shine {
+
+    0% {
+        left: -100%;
     }
-    75%,100%{
-        transform:translateX(330%);
+
+    55%,100% {
+        left: 150%;
     }
 }
 
-.cta:active{
-    transform:scale(.975);
+.cta-button:active {
+    transform: scale(.97);
 }
 
-.cta.disabled{
-    opacity:.65;
-    pointer-events:none;
+/* ================= ACCESS TEXT ================= */
+
+.instant-access {
+    margin-top: -8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
 }
 
-/* TRUST */
-.trust{
-    text-align:center;
-    margin-bottom:14px;
-    color:#687283;
-    font-size:9px;
-    line-height:1.5;
-}
+/* ================= STATS ================= */
 
-/* LEARNING */
-.learning{
-    padding:16px;
-    border-radius:19px;
+.stats-box {
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
     background:
-        linear-gradient(135deg,
-        rgba(255,195,58,.07),
-        rgba(255,255,255,.025));
-    border:1px solid rgba(255,195,58,.12);
-    margin-bottom:12px;
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.025),
+            rgba(245,197,66,.015)
+        );
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-radius: 16px;
+
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,.015);
 }
 
-.learning-title{
-    display:flex;
-    align-items:center;
-    gap:9px;
-    font-size:14px;
-    font-weight:800;
-    margin-bottom:12px;
+.stat-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-right:
+        1px solid rgba(255,255,255,.10);
 }
 
-.learning-icon{
-    width:30px;
-    height:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:9px;
-    background:rgba(255,195,58,.10);
+.stat-item:last-child {
+    border-right: none;
 }
 
-.item{
-    display:flex;
-    align-items:flex-start;
-    gap:9px;
-    margin:9px 0;
-    color:#c1c8d4;
-    font-size:11px;
-    line-height:1.45;
+.stat-value {
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 12px rgba(245,197,66,.18);
 }
 
-.check{
-    flex:none;
-    width:18px;
-    height:18px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    background:rgba(66,220,135,.10);
-    color:#55df91;
-    font-size:9px;
-    font-weight:900;
+.stat-label {
+
+    color: var(--muted);
+
+    font-family: Georgia, serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
 }
 
-/* COMMUNITY */
-.community{
-    padding:14px;
-    border-radius:17px;
-    background:#0b0e14;
-    border:1px solid rgba(255,255,255,.07);
+/* ================= NOTE ================= */
+
+.tracking-note {
+
+    color: #625d51;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    max-width: 330px;
 }
 
-.community-row{
-    display:flex;
-    align-items:center;
-    gap:11px;
-}
+/* ================= MOBILE ================= */
 
-.telegram-icon{
-    width:40px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:12px;
-    background:rgba(39,161,218,.12);
-    font-size:21px;
-}
+@media (max-width: 360px) {
 
-.community-text strong{
-    display:block;
-    font-size:12px;
-    margin-bottom:3px;
-}
-
-.community-text span{
-    color:#7f8999;
-    font-size:9px;
-}
-
-.footer{
-    text-align:center;
-    margin-top:16px;
-    color:#4f5867;
-    font-size:8px;
-    line-height:1.5;
-}
-
-@media(max-width:360px){
-
-    .wrapper{
-        padding:10px 9px 25px;
+    body {
+        padding: 15px;
     }
 
-    .card{
-        padding:21px 14px 18px;
-        border-radius:24px;
+    .container {
+        padding-top: 15px;
     }
 
-    h1{
-        font-size:27px;
+    .logo-container {
+        width: 125px;
+        height: 125px;
     }
 
-    .logo-wrap,
-    .logo{
-        width:76px;
-        height:76px;
+    h1 {
+        font-size: 27px;
     }
 
-    .logo{
-        font-size:34px;
-    }
-
-    .cta{
-        font-size:14px;
+    .cta-button {
+        font-size: 14px;
+        padding: 17px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <div class="topbar">
-        <span class="online-dot"></span>
-        BADSHAH ARMY COMMUNITY
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img
+            src="logo.png"
+            alt="Earn With Badshah Logo">
     </div>
 
-    <main class="card">
+    <!-- BADGE -->
+    <div class="badge">
+        🛡️ COMMUNITY & STRATEGY
+    </div>
 
-        <!-- LOGO -->
-        <div class="logo-wrap">
-            <div class="logo">♛</div>
-            <div class="logo-ring"></div>
-        </div>
+    <!-- TITLE -->
+    <h1>EARN WITH BADSHAH</h1>
 
-        <div class="badge">
-            
-           BIG FUND. BIG PROFIT. DAILY PROFIT 
-        </div>
+    <div class="subtitle">
+        🔥 NUMBER SHOT 🔥
+    </div>
 
-        <h1>BADSHAH ARMY</h1>
+    <div class="features">
+        Market Trends • Strategy Discussions • Daily<br>
+        Updates
+    </div>
 
-        <p class="subtitle">
-            PROFIT AGAR KARNA HAI TO IDAR UDAR MAT JAO ABHI BHI TIME HAI BADSHAH ARMY KE SATH JOIN HO JAO..
-        </p>
+    <!-- TELEGRAM -->
+    <a
+        href="https://t.me/+uz9YUqb02Nw4ZTNl"
+        class="cta-button"
+        id="telegramBtn"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
 
-        <!-- STATS -->
-        <div class="stats">
-
-            <div class="stat">
-                <div class="stat-number">1500+</div>
-                <div class="stat-label">MEMBERS</div>
-            </div>
-
-            <div class="stat">
-                <div class="stat-number">99%</div>
-                <div class="stat-label">
-                WINNING RATE*</div>
-            </div>
-
-        </div>
-
-        <!-- CTA — DIRECTLY VISIBLE -->
-        <a
-            id="joinBtn"
-            class="cta"
-            href="https://t.me/+WRaDC2f0PX04YThl"
-            target="_blank"
-            rel="noopener noreferrer"
+        <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
         >
-            🚀 JOIN TELEGRAM
-        </a>
 
-        <div class="trust">
-            Tap only if you genuinely want to join the Telegram community.
+            <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                fill="black"
+            />
+
+            <path
+                d="M16.8926 7.61664L14.7766 18.5273C14.6206 19.274 14.1818 19.4673 13.5676 19.0967L10.1583 16.3861L8.51307 18.1132C8.33083 18.311 8.17937 18.4727 7.82276 18.4727L8.0673 14.766L14.1166 8.78443C14.3797 8.52834 14.0592 8.38615 13.708 8.63412L6.23708 13.7548L2.94635 12.6315C2.23193 12.3917 2.21852 11.8546 3.09459 11.4828L15.9616 6.07184C16.5574 5.82855 17.0768 6.20815 16.8926 7.61664Z"
+                fill="white"
+            />
+
+        </svg>
+
+        JOIN TELEGRAM →
+
+    </a>
+
+    <div class="instant-access">
+        ⚡ INSTANT ACCESS • FREE COMMUNITY
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-box">
+
+        <div class="stat-item">
+            <span class="stat-value">24/7</span>
+            <span class="stat-label">COMMUNITY</span>
         </div>
 
-        <!-- LEARNING -->
-        <section class="learning">
-
-            <div class="learning-title">
-                <div class="learning-icon">📚</div>
-                What You'll Find
-            </div>
-
-            <div class="item">
-                <span class="check">✓</span>
-                <span>UNDER 2-3 LEVEL WINNING </span>
-            </div>
-
-            <div class="item">
-                <span class="check">✓</span>
-                <span>BDG PLATFROM</span>
-            </div>
-
-            <div class="item">
-                <span class="check">✓</span>
-                <span>NO DEPOSIT NO WITHDRAWAL PROBLEM </span>
-            </div>
-
-            <div class="item">
-                <span class="check">✓</span>
-                <span>DAILY 2000₹ PROFIT HO RAHA HAI HAMRE MEMBERS KA</span>
-            </div>
-
-        </section>
-
-        <!-- COMMUNITY -->
-        <section class="community">
-
-            <div class="community-row">
-
-                <div class="telegram-icon">✈️</div>
-
-                <div class="community-text">
-                    <strong>1500+ Members</strong>
-                    <span>Badshah Army Telegram Community</span>
-                </div>
-
-            </div>
-
-        </section>
-
-        <div class="footer">
-            *The displayed rate is a community claim and is not a guarantee
-            of future results.<br>
-            © 2026 BADSHAH ARMY
+        <div class="stat-item">
+            <span class="stat-value">24K+</span>
+            <span class="stat-label">MEMBERS</span>
         </div>
 
-    </main>
+        <div class="stat-item">
+            <span class="stat-value">LIVE</span>
+            <span class="stat-label">UPDATES</span>
+        </div>
+
+    </div>
+
+    <div class="tracking-note">
+        Community information and updates are provided for educational purposes.
+    </div>
 
 </div>
 
 <script>
+
 /*
-  CLICK PROTECTION
-  ----------------
-  Prevents accidental repeated taps and duplicate Lead events.
+    Meta Pixel:
+    PageView = page visit
+    Lead = Telegram CTA click
+
+    Lead records the website CTA interaction.
+    It does not confirm an actual Telegram join.
 */
 
-const joinBtn = document.getElementById("joinBtn");
+const telegramBtn =
+    document.getElementById("telegramBtn");
 
-let clickLock = false;
 let leadTracked = false;
+let clickLocked = false;
 
-joinBtn.addEventListener("click", function(e){
+telegramBtn.addEventListener("click", function(event) {
 
-    if(clickLock){
-        e.preventDefault();
+    if (clickLocked) {
+        event.preventDefault();
         return;
     }
 
-    clickLock = true;
+    clickLocked = true;
 
-    /* Track the first genuine CTA interaction */
-    if(!leadTracked && typeof fbq === "function"){
-        fbq("track","Lead");
+    if (
+        !leadTracked &&
+        typeof fbq === "function"
+    ) {
+
+        fbq(
+            "track",
+            "Lead"
+        );
+
         leadTracked = true;
     }
 
-    /* Prevent accidental double taps */
-    joinBtn.classList.add("disabled");
+    telegramBtn.style.pointerEvents = "none";
+    telegramBtn.style.opacity = "0.75";
 
-    setTimeout(function(){
-        clickLock = false;
-        joinBtn.classList.remove("disabled");
-    },1500);
+    setTimeout(function() {
+
+        clickLocked = false;
+
+        telegramBtn.style.pointerEvents = "auto";
+        telegramBtn.style.opacity = "1";
+
+    }, 1500);
 
 });
+
 </script>
 
 </body>
